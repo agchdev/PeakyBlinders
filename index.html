@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
-          --animate-italic: italics .5s ease-in-out both;
-          @keyframes italics {
-              100% {
-                transform: skewX(-20deg) translateX(10px);
-              }
-          }
-        }
-      </style>
 </head>
-<body class="flex">
-    <header class="bg-gradient-to-r from-cyan-500 to-blue-500 w-full h-screen flex items-center justify-start pl-4 font-bold font-serif text-5xl text-gray-100">
+<style type="text/tailwindcss">
+    @theme{
+        --animate-scaleCircle: scaleCircle .3s ease-in-out both;
+        @keyframes scaleCircle {
+            0% {
+                width: 32px;
+                height: 32px;
+            }
+            100% {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    
+    @theme{
+
+        --animate-descaleCircle: descaleCircle .3s ease-in-out both;
+        @keyframes descaleCircle {
+            0% {
+                width: 80px;
+                height: 80px;
+            }
+            100% {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        
+    }
+    @theme{
+        --animate-spin: spin 10s linear infinite;
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    @theme{
+        --animate-closeHeader: closeHeader 1s ease-in-out both;
+        @keyframes closeHeader {
+            0% {
+                width: 100%;
+            }
+            100% {
+                width: 0%;
+            }
+        }
+    }
+</style>
+
+<body class="flex cursor-none">
+    <div id="customCursor" class="cursor-none pointer-events-none fixed top-0 left-0 w-8 h-8 rounded-full backdrop-invert opacity-0 transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2 z-50 flex justify-center items-center">
+        <circular-text
+            id="text_cursor"
+            class="text-white animate-spin duration-900"
+            text=""
+            radius="90"
+        ></circular-text>
+        <!-- <div id="text_cursor"></div> -->
+    </div>
+    
+    <header id="header" class="overflow-hidden absolute bg-gradient-to-r from-gray-800 to-gray-900 lg:from-gray-800 lg:to-black w-full h-screen flex items-center justify-between pl-4 font-bold font-serif text-5xl lg:text-9xl md:text-7xl text-gray-100">
         <nav>
-            <ul>
-                <li class="hover:animate-italic"><a class="" href="">Introduccion</a></li>
-                <li class="hover:animate-italic"><a class=" " href="">Personajes</a></li>
-                <li class="hover:animate-italic"><a class=" " href="">Temporadas</a></li>
-                <li class="hover:animate-italic"><a class=" " href="">Criticas</a></li>
+            <ul class="flex flex-col gap-4">
+                <li class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100"><a  class="cursor-none" href="">Introducción</a></li>
+                <li class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100"><a class="cursor-none" href="">Personajes</a></li>
+                <li class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100"><a class="cursor-none" href="">Temporadas</a></li>
+                <li class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100"><a class="cursor-none" href="">Críticas</a></li>
             </ul>
         </nav>
+        <div class="flex flex-col h-screen">
+            <div class="h-80 m-auto flex items-center justify-center">
+                <p id="cerrarHeader" class="m-auto font-mono cursor-none font-light text-5xl" id="">x</p>
+            </div>
+            <div>
+                <a class="pr-4 cursor-none font-light text-5xl" href="">Netflix</a>
+            </div>
+        </div>
     </header>
     <script src="./js/app.js"></script>
+    <script
+        type="module"
+        src="https://unpkg.com/@webpunk/circular-text@1.3.0/dist-web/index.bundled.js">
+      </script>
 </body>
+
 </html>
