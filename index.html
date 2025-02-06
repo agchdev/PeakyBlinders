@@ -10,10 +10,7 @@
           --animate-italic: italics .5s ease-in-out both;
           @keyframes italics {
               100% {
-                -webkit-transform: skewX(-20deg);
-                -moz-transform: skewX(-20deg);
-                -o-transform: skewX(-20deg);
-                transform: skewX(-20deg);
+                transform: skewX(-20deg) translateX(10px);
               }
           }
         }
@@ -24,9 +21,9 @@
         <nav>
             <ul>
                 <li class="hover:animate-italic"><a class="" href="">Introduccion</a></li>
-                <li><a class=" " href="">Personajes</a></li>
-                <li><a class=" " href="">Temporadas</a></li>
-                <li><a class=" " href="">Criticas</a></li>
+                <li class="hover:animate-italic"><a class=" " href="">Personajes</a></li>
+                <li class="hover:animate-italic"><a class=" " href="">Temporadas</a></li>
+                <li class="hover:animate-italic"><a class=" " href="">Criticas</a></li>
             </ul>
         </nav>
     </header>
