@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+          --animate-italic: italics .5s ease-in-out both;
+          @keyframes italics {
+              100% {
+                -webkit-transform: skewX(-20deg);
+                -moz-transform: skewX(-20deg);
+                -o-transform: skewX(-20deg);
+                transform: skewX(-20deg);
+              }
+          }
+        }
+      </style>
 </head>
-<body>
-    
+<body class="flex">
+    <header class="bg-gradient-to-r from-cyan-500 to-blue-500 w-full h-screen flex items-center justify-start pl-4 font-bold font-serif text-5xl text-gray-100">
+        <nav>
+            <ul>
+                <li class="hover:animate-italic"><a class="" href="">Introduccion</a></li>
+                <li><a class=" " href="">Personajes</a></li>
+                <li><a class=" " href="">Temporadas</a></li>
+                <li><a class=" " href="">Criticas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="./js/app.js"></script>
 </body>
 </html>
