@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cursor = document.getElementById("customCursor");
     const cursorText = document.getElementById("text_cursor");
     const netflix = document.getElementById("netflix");
+    const btnHeader = document.getElementById("btnHeader");
     const nav = document.getElementById("header");
     const cerrarHeader = document.getElementById("cerrarHeader");
     const liHeader = document.querySelectorAll(".cursorHover")
@@ -24,6 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cerrarHeader.addEventListener("click", () => {
         nav.classList.add("animate-closeHeader")
+        nav.classList.remove("animate-openHeader")
+    })
+
+    btnHeader.addEventListener("click", () => {
+        nav.classList.add("animate-openHeader")
+        nav.classList.remove("animate-closeHeader")
     })
 
 
