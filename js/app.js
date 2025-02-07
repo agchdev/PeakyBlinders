@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const cursor = document.getElementById("customCursor");
     const cursorText = document.getElementById("text_cursor");
+    const netflix = document.getElementById("netflix");
     const nav = document.getElementById("header");
-    console.log(nav)
     const cerrarHeader = document.getElementById("cerrarHeader");
     const liHeader = document.querySelectorAll(".cursorHover")
 
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     encogeAgranda(cerrarHeader, false)
+    encogeAgranda(netflix, true)
 
     liHeader.forEach(el => {
         encogeAgranda(el, true)
