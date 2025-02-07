@@ -31,9 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnHeader.addEventListener("click", () => {
         nav.classList.add("animate-openHeader")
         nav.classList.remove("animate-closeHeader")
+        nav.classList.remove("hidden")
     })
 
-
+    encogeAgranda(btnHeader, false)
     encogeAgranda(cerrarHeader, false)
     encogeAgranda(netflix, true)
 
