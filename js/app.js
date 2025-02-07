@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cursorText = document.getElementById("text_cursor");
     const netflix = document.getElementById("netflix");
     const btnHeader = document.getElementById("btnHeader");
+    const videoYT = document.getElementById("videoYT");
     const nav = document.getElementById("header");
     const cerrarHeader = document.getElementById("cerrarHeader");
     const liHeader = document.querySelectorAll(".cursorHover")
@@ -34,17 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.remove("hidden")
     })
 
-    encogeAgranda(btnHeader, false)
-    encogeAgranda(cerrarHeader, false)
-    encogeAgranda(netflix, true)
+    encogeAgranda(btnHeader, false, "")
+    encogeAgranda(cerrarHeader, false, "Cerrar")
+    encogeAgranda(netflix, true, "Click")
+    encogeAgranda(videoYT, true, "Play")
 
     liHeader.forEach(el => {
-        encogeAgranda(el, true)
+        encogeAgranda(el, true, "")
     })
 
-    function encogeAgranda(el, muestra){
+    function encogeAgranda(el, muestra, text){
         el.addEventListener("mouseenter", () => {
-            agrandarMouse(el, muestra)
+            agrandarMouse(el, muestra, text)
         })
         el.addEventListener("mouseleave", () => {
             encogerMouse(el, muestra)
@@ -52,13 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Agrandar mouse cuando me interese
-    function agrandarMouse(el, muestra){
+    function agrandarMouse(el, muestra, texto){
         cursor.classList.add("animate-scaleCircle")
         cursor.classList.add("h-20")
         cursor.classList.add("w-20")
         let text = el.textContent
-        console.log(text)
-        if(muestra) cursorText.text=`${text}`
+        if(muestra) cursorText.text=`${texto}`
+        cursor.style.color = "white";
+        if(texto != "") cursor.innerText = `${texto}`
     }
 
     // Encoger mouse cuando me interese
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cursor.classList.add("animate-descaleCircle")
         cursor.classList.remove("h-20")
         cursor.classList.remove("w-20")
+        cursor.innerText = ``
         if(muestra) cursorText.text=``
     }
 
