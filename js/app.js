@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoYT = document.getElementById("videoYT");
     const nav = document.getElementById("header");
     const cerrarHeader = document.getElementById("cerrarHeader");
+    const actRiv = document.getElementById("actRiv");
+    const womenPow = document.getElementById("womenPow");
+    const michaelShelbi = document.getElementById("michaelShelbi");
     const liHeader = document.querySelectorAll(".cursorHover")
 
     // Al mover el mouse, actualizamos la posición del cursor
@@ -35,7 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.remove("hidden")
     })
 
+    womenPow.addEventListener("mouseenter", () => {
+        
+    })
+
+    // ENCONGER AGRANDAR 
     encogeAgranda(btnHeader, false, "")
+    encogeAgranda(womenPow, true, "Hover")
+    encogeAgranda(michaelShelbi, true, "Hover")
+    encogeAgranda(actRiv, true, "Hover")
     encogeAgranda(cerrarHeader, false, "Cerrar")
     encogeAgranda(netflix, true, "Click")
     encogeAgranda(videoYT, true, "Play")
