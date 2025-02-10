@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     womenPow.addEventListener("mouseenter", () => {
         
     })
+    actRiv.addEventListener("mouseenter", () => {
+        
+    })
 
     // ENCONGER AGRANDAR 
     encogeAgranda(btnHeader, false, "")
