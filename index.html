@@ -128,16 +128,20 @@
             <ul class="flex flex-col gap-4">
                 <li
                     class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100">
-                    <a class="cursor-none" href="">Introducción</a></li>
+                    <a class="cursor-none" href="">Introducción</a>
+                </li>
                 <li
                     class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100">
-                    <a class="cursor-none" href="">Personajes</a></li>
+                    <a class="cursor-none" href="">Personajes</a>
+                </li>
                 <li
                     class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100">
-                    <a class="cursor-none" href="">Temporadas</a></li>
+                    <a class="cursor-none" href="">Temporadas</a>
+                </li>
                 <li
                     class="cursorHover hover:-skew-x-10 transition-all duration-500 relative inline-block before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-white before:origin-left before:transition-all hover:before:scale-x-100">
-                    <a class="cursor-none" href="">Críticas</a></li>
+                    <a class="cursor-none" href="">Críticas</a>
+                </li>
             </ul>
         </nav>
         <div class="flex flex-col h-screen">
@@ -187,26 +191,40 @@
         <section class="bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 transition-all pb-5 overflow-hidden">
             <div class="relative lg:flex lg:justify-end">
                 <div class="transition m-auto w-full flex justify-center lg:pl-50 lg:mt-10 ">
-                    <div id="videoYT" class="transition-opacity opacity-0 lg:opacity-50 w-200 h-100 bg-white duration-500 cursor-none absolute z-4 "></div>
-                    <iframe
-                        class="transition w-200 h-100 relative z-3 drop-shadow-lg"
+                    <div id="videoYT"
+                        class="transition-opacity opacity-0 lg:opacity-50 w-200 h-100 bg-white duration-500 cursor-none absolute z-4 ">
+                    </div>
+                    <iframe class="transition w-200 h-100 relative z-3 drop-shadow-lg"
                         src="https://www.youtube.com/embed/0gYSj_J2bzs?controls=0&modestbranding=1&showinfo=0&rel=0&autohide=0&disablekb=0"
-                        title="YouTube video player"
-                        frameborder="0"
-                        showinfo = "0"
+                        title="YouTube video player" frameborder="0" showinfo="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                    
+                        allowfullscreen></iframe>
+
                 </div>
-                <div class=" transition-all duration-500 text-2xl font-bold font-serif w-90 m-auto py-2 text-gray-900 lg:absolute lg:left-50 lg:top-40 lg:text-4xl lg:w-120 z-5">
-                    <h3>THOMAS SHELBI, UN HOMBRE <span class="hover:bg-gradient-to-r hover:from-red-900 via-red-500 hover:to-red-900 hover:text-transparent hover:bg-clip-text">SIN LÍMITES</span></h3>
-                    <p class="font-light text-sm relative left-4 mt-4 md:left-6 md:mt-6">Tommy es frío, calculador y despiadado, pero también encantador y leal. Hará lo que sea para mejorar su posición y el poder de su familia.</p>
+                <div
+                    class=" transition-all duration-500 text-2xl font-bold font-serif w-90 m-auto py-2 text-gray-900 lg:absolute lg:left-50 lg:top-40 lg:text-4xl lg:w-120 z-5">
+                    <h3>THOMAS SHELBI, UN HOMBRE <span
+                            class="hover:bg-gradient-to-r hover:from-red-900 via-red-500 hover:to-red-900 hover:text-transparent hover:bg-clip-text">SIN
+                            LÍMITES</span></h3>
+                    <p class="font-light text-sm relative left-4 mt-4 md:left-6 md:mt-6">Tommy es frío, calculador y
+                        despiadado, pero también encantador y leal. Hará lo que sea para mejorar su posición y el poder
+                        de su familia.</p>
                 </div>
             </div>
         </section>
-        <section>
-            
+        <section class="text-gray-700">
+            <div class="border-t-1 border-gray-500 border-90 md:border-0 bg-opacity-0 h-50 bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center">
+                <p>Actuales rivales</p>
+                <h3 class="text-center font-bold text-2xl font-serif">Oswel Y Thomas Shelbi</h3>
+            </div>
+            <div class="border-t-1 border-gray-500 border-90 md:border-0 bg-opacity-0 h-50 bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center">
+                <p>Las mujeres al poder</p>
+                <h3 class="text-center font-bold text-2xl font-serif">Polly Shelbi</h3>
+            </div>
+            <div class="border-t-1 border-b-1 md:border-0 border-90 border-gray-500 bg-opacity-0 h-50 bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center">
+                <p>Solo puede quedar uno</p>
+                <h3 class="text-center font-bold text-2xl font-serif">Michael Shelbi</h3>
+            </div>
         </section>
     </main>
     <script src="./js/app.js"></script>
