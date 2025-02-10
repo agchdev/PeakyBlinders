@@ -37,14 +37,36 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.remove("animate-closeHeader")
         nav.classList.remove("hidden")
     })
-
-    womenPow.addEventListener("mouseenter", () => {
-        
-    })
+    
+    
+    
     actRiv.addEventListener("mouseenter", () => {
-        
+        document.querySelector("#actRiv > div:first-child").style.transform = "translate(0px, -100%)"
+        document.querySelector("#actRiv > div:nth-child(2)").style.transform = "translate(0%, 100%)"
+    })
+    actRiv.addEventListener("mouseleave", () => {
+        document.querySelector("#actRiv > div:first-child").style.transform = "translate(0px, 0%)"
+        document.querySelector("#actRiv > div:nth-child(2)").style.transform = "translate(0px, 0%)"
+    })
+    
+    womenPow.addEventListener("mouseenter", () => {
+        document.querySelector("#womenPow > div:first-child").style.transform = "translate(0px, -100%)"
+        document.querySelector("#womenPow > div:nth-child(2)").style.transform = "translate(0%, 100%)"
+    })
+    womenPow.addEventListener("mouseleave", () => {
+        document.querySelector("#womenPow > div:first-child").style.transform = "translate(0px, 0%)"
+        document.querySelector("#womenPow > div:nth-child(2)").style.transform = "translate(0px, 0%)"
     })
 
+    michaelShelbi.addEventListener("mouseenter", () => {
+        document.querySelector("#michaelShelbi > div:first-child").style.transform = "translate(0px, -100%)"
+        document.querySelector("#michaelShelbi > div:nth-child(2)").style.transform = "translate(0%, 100%)"
+    })
+    michaelShelbi.addEventListener("mouseleave", () => {
+        document.querySelector("#michaelShelbi > div:first-child").style.transform = "translate(0px, 0%)"
+        document.querySelector("#michaelShelbi > div:nth-child(2)").style.transform = "translate(0px, 0%)"
+    })
+    
     // ENCONGER AGRANDAR 
     encogeAgranda(btnHeader, false, "")
     encogeAgranda(womenPow, true, "Hover")
