@@ -60,6 +60,16 @@
             }
         }
 
+        --animate-personajes1: personajes1 30s linear infinite;
+        @keyframes personajes1 {
+            0% {
+                transform: translate(0%, 0%);
+            }
+            100% {
+                transform: translate(-112.8%, 0%);
+            }
+        }
+
         --animate-textUpDown: textUpDown 6s ease-in-out infinite;
         @keyframes textUpDown {
             0% {
@@ -182,7 +192,7 @@
                 <div
                     class="animate-textUpDownD bg-gradient-to-r from-red-900 via-red-500 to-red-900 text-transparent bg-clip-text">
                     <p>THOMAS</p>
-                    <p>SHELBI</p>
+                    <p>SHELBY</p>
                 </div>
             </div>
             <div>
@@ -204,7 +214,7 @@
                 </div>
                 <div
                     class=" transition-all duration-500 text-2xl font-bold font-serif w-90 m-auto py-2 text-gray-900 lg:absolute lg:left-50 lg:top-40 lg:text-4xl lg:w-120 z-5">
-                    <h3>THOMAS SHELBI, UN HOMBRE <span
+                    <h3>THOMAS SHELBY, UN HOMBRE <span
                             class="hover:bg-gradient-to-r hover:from-red-900 via-red-500 hover:to-red-900 hover:text-transparent hover:bg-clip-text">SIN
                             LÍMITES</span></h3>
                     <p class="font-light text-sm relative left-4 mt-4 md:left-6 md:mt-6">Tommy es frío, calculador y
@@ -232,7 +242,7 @@
                 <div class="relative top-[0%] duration-900 h-50 w-full z-1 bg-white transition-all pointer-events-none"></div>
                 <div class="absolute z-2 text-center">
                     <p>El poder femenino</p>
-                    <h3 class="transition-all text-center font-bold text-2xl hover:text-3xl md:text-4xl hover:text-5xl lg:text-7xl hover:lg:text-8xl xl:text-9xl hover:xl:text-10xl font-serif hover:-skew-x-10 transition-all duration-300">Polly Shelbi</h3>
+                    <h3 class="transition-all text-center font-bold text-2xl hover:text-3xl md:text-4xl hover:text-5xl lg:text-7xl hover:lg:text-8xl xl:text-9xl hover:xl:text-10xl font-serif hover:-skew-x-10 transition-all duration-300">Polly Shelby</h3>
                 </div>
             </div>
             <div id="michaelShelbi" class="transition-all border-t-1 border-gray-500 w-[95%] m-auto lg:border-0 bg-opacity-0 h-50 xl:h-100 bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center hover:bg-cover lg:hover:text-white lg:bg-[url(./img/michael.webp)] overflow-hidden">
@@ -241,18 +251,36 @@
                 <div class="relative top-[0%] duration-900 h-50 w-full z-1 bg-white transition-all pointer-events-none"></div>
                 <div class="absolute z-2 text-center">
                     <p>Solo vivirá uno de los dos</p>
-                    <h3 class="transition-all text-center font-bold text-2xl hover:text-3xl md:text-4xl hover:text-5xl lg:text-7xl hover:lg:text-8xl xl:text-9xl hover:xl:text-10xl font-serif hover:-skew-x-10 transition-all duration-300">Michael Shelbi</h3>
+                    <h3 class="transition-all text-center font-bold text-2xl hover:text-3xl md:text-4xl hover:text-5xl lg:text-7xl hover:lg:text-8xl xl:text-9xl hover:xl:text-10xl font-serif hover:-skew-x-10 transition-all duration-300">Michael Shelby</h3>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="flex gap-4 rounded-xl py-10 overflow-hidden">
-                <div class="rounded-xl h-[600px] w-[520px] bg-[url(./img/card1.jpg)] bg-center flex justify-center items-center">
-                    <h3 class="">Thomas Shelbi</h3>
+        <section class="overflow-hidden">
+            <div class="relative flex gap-4 rounded-xl py-10 animate-personajes1">
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card1.jpg)] bg-center flex justify-center items-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
                 </div>
-                <div class="rounded-xl h-[600px] w-[520px] bg-[url(./img/card3.jpg)] bg-center"></div>
-                <div class="rounded-xl h-[600px] w-[520px] bg-[url(./img/card2.jpg)] bg-center"></div>
-                <div class="rounded-xl h-[600px] w-[520px] bg-[url(./img/card4.jpg)] bg-center"></div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card3.jpg)] bg-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card2.jpg)] bg-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card4.jpg)] bg-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card1.jpg)] bg-center flex justify-center items-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card3.jpg)] bg-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card2.jpg)] bg-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
+                <div class="rounded-xl min-h-[600px] min-w-[520px] bg-[url(./img/card4.jpg)] bg-center">
+                    <h3 class="font-bold text-4xl text-gray-100 font-serif">Thomas Shelby</h3>
+                </div>
             </div>
         </section>
     </main>
