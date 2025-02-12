@@ -32,16 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let x = 0
     let y = 0
     let tam = 200;
-    let finTam = 0;
-
-    function efectoAntorcha(tam){
-        setTimeout(() => {
-            finTam = Math.floor(Math.random() * (tam - (tam-200) + 1)) + (tam-100);
-        }, 2000);
-    }
+    let finTam = 300;
 
     function luzEffect(x,y,overlay,tam){
-        efectoAntorcha(tam)
+        finTam = tam;
         let maskStyle = `radial-gradient(circle ${finTam}px at ${x}px ${y}px, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 70%)`;
 
         overlay.style.maskImage = maskStyle;
@@ -50,20 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pBlinder.addEventListener("mouseenter", () => {
         console.log(pBlinder.offsetWidth)
-        document.addEventListener("mousemove", (e) => {
-                x = e.clientX;
-                y = e.clientY-500;
-            if(pBlinder.offsetWidth>1024 && pBlinder.offsetWidth<1280){
-                x = e.clientX;
-                y = e.clientY-200;
-                tam = 400;
-            }else if(pBlinder.offsetWidth>1280){
+        if(pBlinder.offsetWidth>1024){
+            document.addEventListener("mousemove", (e) => {
                 x = e.clientX;
                 y = e.clientY;
                 tam = 1000;
-            }
-            luzEffect(x,y,overlay,tam)
-        });
+                luzEffect(x,y,overlay,tam)
+            });
+        }
 
     })
     
