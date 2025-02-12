@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const michaelShelbi = document.getElementById("michaelShelbi");
     const putos = document.getElementById("putos");
     const disparos = document.getElementById("disparos");
+    const pBlinder = document.getElementById("pBlinder");
     const liHeader = document.querySelectorAll(".cursorHover");
 
     const textPutos = ["P****","*U***","**T**","***O*","****S"]
@@ -27,6 +28,44 @@ document.addEventListener("DOMContentLoaded", () => {
         cursor.style.left = `${e.clientX}px`;
         cursor.style.top = `${e.clientY}px`;
     });
+    const overlay = document.querySelector(".overlay");
+    let x = 0
+    let y = 0
+    let tam = 200;
+    let finTam = 0;
+
+    function efectoAntorcha(tam){
+        setTimeout(() => {
+            finTam = Math.floor(Math.random() * (tam - (tam-200) + 1)) + (tam-100);
+        }, 2000);
+    }
+
+    function luzEffect(x,y,overlay,tam){
+        efectoAntorcha(tam)
+        let maskStyle = `radial-gradient(circle ${finTam}px at ${x}px ${y}px, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 70%)`;
+
+        overlay.style.maskImage = maskStyle;
+        overlay.style.webkitMaskImage = maskStyle;
+    }
+
+    pBlinder.addEventListener("mouseenter", () => {
+        console.log(pBlinder.offsetWidth)
+        document.addEventListener("mousemove", (e) => {
+                x = e.clientX;
+                y = e.clientY-500;
+            if(pBlinder.offsetWidth>1024 && pBlinder.offsetWidth<1280){
+                x = e.clientX;
+                y = e.clientY-200;
+                tam = 400;
+            }else if(pBlinder.offsetWidth>1280){
+                x = e.clientX;
+                y = e.clientY;
+                tam = 1000;
+            }
+            luzEffect(x,y,overlay,tam)
+        });
+
+    })
     
     // Si el mouse sale de la ventana, ocultamos el cursor
     window.addEventListener("mouseleave", () => {
