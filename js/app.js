@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#michaelShelbi > div:nth-child(2)").style.transform = "translate(0px, 0%)"
     })
     
+    console.log("hola")
     // ENCONGER AGRANDAR 
     encogeAgranda(btnHeader, false, "")
     encogeAgranda(womenPow, true, "Hover")
@@ -129,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     encogeAgranda(videoYT, true, "Play")
     
     liHeader.forEach(el => {
-        encogeAgranda(el, true, "")
+        encogeAgranda(el, true, "hola")
     })
 
     let pos = 0;
@@ -143,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function encogeAgranda(el, muestra, text){
         el.addEventListener("mouseenter", () => {
+            console.log(muestra)
             agrandarMouse(el, muestra, text)
         })
         el.addEventListener("mouseleave", () => {
@@ -155,10 +157,16 @@ document.addEventListener("DOMContentLoaded", () => {
         cursor.classList.add("animate-scaleCircle")
         cursor.classList.add("h-20")
         cursor.classList.add("w-20")
-        let text = el.textContent
-        if(muestra) cursorText.text=`${texto}`
+        let text = el.textContent.trim();
+        if(muestra) {
+            console.log(text)
+            console.log(cursorText)
+            cursorText.setAttribute("text", text);
+            cursorText.remove(); 
+            cursor.append(cursorText);
+        }
         cursor.style.color = "white";
-        if(texto != "") cursor.innerText = `${texto}`
+        // if(texto != "") cursor.innerText += `${texto}`
     }
     
     // Encoger mouse cuando me interese
@@ -167,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cursor.classList.add("animate-descaleCircle")
         cursor.classList.remove("h-20")
         cursor.classList.remove("w-20")
-        cursor.innerText = ``
+        cursor.innerText += ``
         if(muestra) cursorText.text=``
     }
 
