@@ -63,12 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
     cerrarHeader.addEventListener("click", () => {
         nav.classList.add("animate-closeHeader")
         nav.classList.remove("animate-openHeader")
+        document.body.classList.remove("overflow-y-hidden")
     })
     
     btnHeader.addEventListener("click", () => {
         nav.classList.add("animate-openHeader")
         nav.classList.remove("animate-closeHeader")
         nav.classList.remove("hidden")
+        document.body.classList.add("overflow-y-hidden")
     })
     
     disparos.addEventListener("click", (e) => {
